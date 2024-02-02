@@ -1,0 +1,14 @@
+beautifulsoup4
+pandas
+numpy
+scikit-learn
+datetime
+requests
+lxml
+html5lib
+openpyxl
+imblearn
+seaborn
+statsmodels
+IPython
+xgboost

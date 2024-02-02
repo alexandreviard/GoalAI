@@ -1,0 +1,55 @@
+Date,Time,Comp,Round,Day,Venue,Result,GF,GA,Opponent,xG,xGA,Poss,Attendance,Captain,Formation,Referee,Match Report,Notes,Team,DateTime
+2024-01-26,21:00,Ligue 1,Matchweek 19,Fri,Home,,,,Rennes,,,,,,,,Head-to-Head,,Lyon,2024-01-26 21:00:00
+2024-01-26,21:00,Ligue 1,Matchweek 19,Fri,Away,,,,Lyon,,,,,,,,Head-to-Head,,Rennes,2024-01-26 21:00:00
+2024-01-27,17:00,Ligue 1,Matchweek 19,Sat,Away,,,,Nice,,,,,,,,Head-to-Head,,Metz,2024-01-27 17:00:00
+2024-01-27,17:00,Ligue 1,Matchweek 19,Sat,Home,,,,Metz,,,,,,,,Head-to-Head,,Nice,2024-01-27 17:00:00
+2024-01-27,21:00,Ligue 1,Matchweek 19,Sat,Away,,,,Marseille,,,,,,,,Head-to-Head,,Monaco,2024-01-27 21:00:00
+2024-01-27,21:00,Ligue 1,Matchweek 19,Sat,Home,,,,Monaco,,,,,,,,Head-to-Head,,Marseille,2024-01-27 21:00:00
+2024-01-28,13:00,Ligue 1,Matchweek 19,Sun,Away,,,,Montpellier,,,,,,,,Head-to-Head,,Lille,2024-01-28 13:00:00
+2024-01-28,13:00,Ligue 1,Matchweek 19,Sun,Home,,,,Lille,,,,,,,,Head-to-Head,,Montpellier,2024-01-28 13:00:00
+2024-01-28,15:00,Ligue 1,Matchweek 19,Sun,Away,,,,Lorient,,,,,,,,Head-to-Head,,Le Havre,2024-01-28 15:00:00
+2024-01-28,15:00,Ligue 1,Matchweek 19,Sun,Home,,,,Strasbourg,,,,,,,,Head-to-Head,,Clermont Foot,2024-01-28 15:00:00
+2024-01-28,15:00,Ligue 1,Matchweek 19,Sun,Away,,,,Clermont Foot,,,,,,,,Head-to-Head,,Strasbourg,2024-01-28 15:00:00
+2024-01-28,15:00,Ligue 1,Matchweek 19,Sun,Home,,,,Le Havre,,,,,,,,Head-to-Head,,Lorient,2024-01-28 15:00:00
+2024-01-28,15:00,Ligue 1,Matchweek 19,Sun,Home,,,,Nantes,,,,,,,,Head-to-Head,,Reims,2024-01-28 15:00:00
+2024-01-28,15:00,Ligue 1,Matchweek 19,Sun,Away,,,,Reims,,,,,,,,Head-to-Head,,Nantes,2024-01-28 15:00:00
+2024-01-28,17:05,Ligue 1,Matchweek 19,Sun,Home,,,,Lens,,,,,,,,Head-to-Head,,Toulouse,2024-01-28 17:05:00
+2024-01-28,17:05,Ligue 1,Matchweek 19,Sun,Away,,,,Toulouse,,,,,,,,Head-to-Head,,Lens,2024-01-28 17:05:00
+2024-01-28,20:45,Ligue 1,Matchweek 19,Sun,Away,,,,Paris S-G,,,,,,,,Head-to-Head,,Brest,2024-01-28 20:45:00
+2024-01-28,20:45,Ligue 1,Matchweek 19,Sun,Home,,,,Brest,,,,,,,,Head-to-Head,,Paris Saint Germain,2024-01-28 20:45:00
+2024-02-02,21:00,Ligue 1,Matchweek 20,Fri,Home,,,,Paris S-G,,,,,,,,Head-to-Head,,Strasbourg,2024-02-02 21:00:00
+2024-02-02,21:00,Ligue 1,Matchweek 20,Fri,Away,,,,Strasbourg,,,,,,,,Head-to-Head,,Paris Saint Germain,2024-02-02 21:00:00
+2024-02-03,17:00,Ligue 1,Matchweek 20,Sat,Away,,,,Rennes,,,,,,,,Head-to-Head,,Montpellier,2024-02-03 17:00:00
+2024-02-03,17:00,Ligue 1,Matchweek 20,Sat,Home,,,,Montpellier,,,,,,,,Head-to-Head,,Rennes,2024-02-03 17:00:00
+2024-02-03,21:00,Ligue 1,Matchweek 20,Sat,Home,,,,Lens,,,,,,,,Head-to-Head,,Nantes,2024-02-03 21:00:00
+2024-02-03,21:00,Ligue 1,Matchweek 20,Sat,Away,,,,Nantes,,,,,,,,Head-to-Head,,Lens,2024-02-03 21:00:00
+2024-02-04,13:00,Ligue 1,Matchweek 20,Sun,Home,,,,Le Havre,,,,,,,,Head-to-Head,,Monaco,2024-02-04 13:00:00
+2024-02-04,13:00,Ligue 1,Matchweek 20,Sun,Away,,,,Monaco,,,,,,,,Head-to-Head,,Le Havre,2024-02-04 13:00:00
+2024-02-04,15:00,Ligue 1,Matchweek 20,Sun,Away,,,,Lille,,,,,,,,Head-to-Head,,Clermont Foot,2024-02-04 15:00:00
+2024-02-04,15:00,Ligue 1,Matchweek 20,Sun,Away,,,,Reims,,,,,,,,Head-to-Head,,Toulouse,2024-02-04 15:00:00
+2024-02-04,15:00,Ligue 1,Matchweek 20,Sun,Home,,,,Toulouse,,,,,,,,Head-to-Head,,Reims,2024-02-04 15:00:00
+2024-02-04,15:00,Ligue 1,Matchweek 20,Sun,Away,,,,Metz,,,,,,,,Head-to-Head,,Lorient,2024-02-04 15:00:00
+2024-02-04,15:00,Ligue 1,Matchweek 20,Sun,Home,,,,Lorient,,,,,,,,Head-to-Head,,Metz,2024-02-04 15:00:00
+2024-02-04,15:00,Ligue 1,Matchweek 20,Sun,Home,,,,Clermont Foot,,,,,,,,Head-to-Head,,Lille,2024-02-04 15:00:00
+2024-02-04,17:05,Ligue 1,Matchweek 20,Sun,Home,,,,Nice,,,,,,,,Head-to-Head,,Brest,2024-02-04 17:05:00
+2024-02-04,17:05,Ligue 1,Matchweek 20,Sun,Away,,,,Brest,,,,,,,,Head-to-Head,,Nice,2024-02-04 17:05:00
+2024-02-04,20:45,Ligue 1,Matchweek 20,Sun,Home,,,,Marseille,,,,,,,,Head-to-Head,,Lyon,2024-02-04 20:45:00
+2024-02-04,20:45,Ligue 1,Matchweek 20,Sun,Away,,,,Lyon,,,,,,,,Head-to-Head,,Marseille,2024-02-04 20:45:00
+2024-02-09,21:00,Ligue 1,Matchweek 21,Fri,Away,,,,Marseille,,,,,,,,Head-to-Head,,Metz,2024-02-09 21:00:00
+2024-02-09,21:00,Ligue 1,Matchweek 21,Fri,Home,,,,Metz,,,,,,,,Head-to-Head,,Marseille,2024-02-09 21:00:00
+2024-02-10,17:00,Ligue 1,Matchweek 21,Sat,Home,,,,Strasbourg,,,,,,,,Head-to-Head,,Lens,2024-02-10 17:00:00
+2024-02-10,17:00,Ligue 1,Matchweek 21,Sat,Away,,,,Lens,,,,,,,,Head-to-Head,,Strasbourg,2024-02-10 17:00:00
+2024-02-10,21:00,Ligue 1,Matchweek 21,Sat,Home,,,,Lille,,,,,,,,Head-to-Head,,Paris Saint Germain,2024-02-10 21:00:00
+2024-02-10,21:00,Ligue 1,Matchweek 21,Sat,Away,,,,Paris S-G,,,,,,,,Head-to-Head,,Lille,2024-02-10 21:00:00
+2024-02-11,13:00,Ligue 1,Matchweek 21,Sun,Away,,,,Le Havre,,,,,,,,Head-to-Head,,Rennes,2024-02-11 13:00:00
+2024-02-11,13:00,Ligue 1,Matchweek 21,Sun,Home,,,,Rennes,,,,,,,,Head-to-Head,,Le Havre,2024-02-11 13:00:00
+2024-02-11,15:00,Ligue 1,Matchweek 21,Sun,Home,,,,Nantes,,,,,,,,Head-to-Head,,Toulouse,2024-02-11 15:00:00
+2024-02-11,15:00,Ligue 1,Matchweek 21,Sun,Away,,,,Lorient,,,,,,,,Head-to-Head,,Reims,2024-02-11 15:00:00
+2024-02-11,15:00,Ligue 1,Matchweek 21,Sun,Home,,,,Reims,,,,,,,,Head-to-Head,,Lorient,2024-02-11 15:00:00
+2024-02-11,15:00,Ligue 1,Matchweek 21,Sun,Away,,,,Clermont Foot,,,,,,,,Head-to-Head,,Brest,2024-02-11 15:00:00
+2024-02-11,15:00,Ligue 1,Matchweek 21,Sun,Home,,,,Brest,,,,,,,,Head-to-Head,,Clermont Foot,2024-02-11 15:00:00
+2024-02-11,15:00,Ligue 1,Matchweek 21,Sun,Away,,,,Toulouse,,,,,,,,Head-to-Head,,Nantes,2024-02-11 15:00:00
+2024-02-11,17:05,Ligue 1,Matchweek 21,Sun,Away,,,,Montpellier,,,,,,,,Head-to-Head,,Lyon,2024-02-11 17:05:00
+2024-02-11,17:05,Ligue 1,Matchweek 21,Sun,Home,,,,Lyon,,,,,,,,Head-to-Head,,Montpellier,2024-02-11 17:05:00
+2024-02-11,20:45,Ligue 1,Matchweek 21,Sun,Home,,,,Monaco,,,,,,,,Head-to-Head,,Nice,2024-02-11 20:45:00
+2024-02-11,20:45,Ligue 1,Matchweek 21,Sun,Away,,,,Nice,,,,,,,,Head-to-Head,,Monaco,2024-02-11 20:45:00
