@@ -1,16 +1,12 @@
+from leagues.league import League
 import pandas as pd
-import json
-import os
-import numpy as np
-import datetime
-import time
 import requests
 from bs4 import BeautifulSoup
-from PIL import Image
-import io
-from POO.databases.leagues.league import League
+import datetime
+import time
 
 class Downloader:
+
     def __init__(self):
         self.headers = {'User-Agent': 'Mozilla/5.0'}
         self.last_request_time = None
@@ -25,8 +21,8 @@ class Downloader:
             teams_urls = self._fetch_team_urls(league.fbref_url)
 
             for team_url in teams_urls:
-                team_data = self.scrape_team_data(team_url)
-                team_data = self.scrape_detailed_stats(team_data, requests.get(team_url, headers=self.headers).text)
+                team_data = self._scrape_team_data(team_url)
+                team_data = self._scrape_detailed_stats(team_data, requests.get(team_url, headers=self.headers).text)
                 all_seasons_data.append(team_data)
 
         return pd.concat(all_seasons_data, ignore_index=True)
@@ -34,7 +30,7 @@ class Downloader:
     def latest_data_and_futur_matches(self, league: League) -> (pd.DataFrame, pd.DataFrame):
 
         futur_matches = []
-        all_data
+        all_data = []
         teams_urls = self._fetch_team_urls(league.fbref_url)
 
         for team_url in teams_urls:

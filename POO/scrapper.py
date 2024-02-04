@@ -204,7 +204,7 @@ class FootballDataScraper:
         return concatenated_df.reset_index(drop=True), pd.concat(futur_data, ignore_index=True)
 
     def save_data(self, data, file_path):
-        # Enregistrer les données dans un fichier CSV
+        # Enregistrer lesæ© données dans un fichier CSV
         data.to_csv(file_path, index=False)
 
     def rate_limit(self):

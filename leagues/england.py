@@ -1,7 +1,5 @@
-import sys
-print(sys.path)
 
-from POO.databases.leagues.league import League
+from leagues.league import League
 
 class PremierLeague(League):
     def __init__(self):

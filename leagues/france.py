@@ -1,4 +1,4 @@
-from POO.databases.leagues.league import League
+from leagues.league import League
 
 class Ligue1(League):
     def __init__(self):
