@@ -19,5 +19,4 @@ b = Downloader()
 
 c = DataManager('storage')
 a = c.get_data_for_futur_prediction(Eredivisie())
-
-print(a)
+b.scrape_or_update(PremierLeague())

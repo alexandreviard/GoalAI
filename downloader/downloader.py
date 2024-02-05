@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import time
+import os
 
 class Downloader:
 
@@ -14,6 +15,40 @@ class Downloader:
         self.max_seasons = 6
 
 
+    def scrape_or_update(self, league: League) -> pd.DataFrame:
+
+        csv_file_path = os.path.join('storage/data', f"{league.name}_data.csv")
+
+        if os.path.exists(csv_file_path):
+            self.update_data(league)
+
+        else:
+            data = self.all_data(league)
+            self.save_data(data, csv_file_path)
+
+    def update_data(self, league: League) -> pd.DataFrame:
+
+        path_data = os.path.join('storage/data', f"{league.name}_data.csv")
+        path_futur_matches = os.path.join('storage/futur_matches', f"{league.name}_futur_data.csv")
+        data = pd.read_csv(path_data)
+        futur_matches = pd.read_csv(path_futur_matches)
+        now = datetime.datetime.now()
+
+        first_futur_match = pd.to_datetime((futur_matches['Date'] + ' ' + futur_matches['Time']).min())
+
+        if first_futur_match < now + datetime.timedelta(hours = 2):
+            scrapping = self.latest_data_and_futur_matches(league)
+            data = pd.concat([data, scrapping[0].copy()])
+            data.drop_duplicates(subset=['Date', 'Team', 'Opponent'], inplace=True)
+            data.to_csv(path_data)
+
+            futur_matches = self._futur_matches_process(scrapping[1].copy())
+            self.save_data(futur_matches, path_futur_matches)
+
+        else:
+            print("No need to update")
+            return
+
     def all_data(self, league: League) -> pd.DataFrame:
         all_seasons_data = []
         
@@ -21,11 +56,14 @@ class Downloader:
             teams_urls = self._fetch_team_urls(league.fbref_url)
 
             for team_url in teams_urls:
+                self.scrape_and_save_logo(team_url, league.name)
                 team_data = self._scrape_team_data(team_url)
                 team_data = self._scrape_detailed_stats(team_data, requests.get(team_url, headers=self.headers).text)
+                team_data = team_data[team_data['Comp'] == league.name]
                 all_seasons_data.append(team_data)
 
         return pd.concat(all_seasons_data, ignore_index=True)
+
 
     def latest_data_and_futur_matches(self, league: League) -> (pd.DataFrame, pd.DataFrame):
 
@@ -34,14 +72,16 @@ class Downloader:
         teams_urls = self._fetch_team_urls(league.fbref_url)
 
         for team_url in teams_urls:
-            team_data = self.scrape_team_data(team_url)
-            futur_matches.append(team_data)
-            team_data = self.scrape_detailed_stats(team_data, requests.get(team_url, headers=self.headers).text)
+            team_data = self._scrape_team_data(team_url)
+            futur_matches.append(team_data[team_data['Comp']==league.name])
+            team_data = self._scrape_detailed_stats(team_data, requests.get(team_url, headers=self.headers).text)
+            team_data = team_data[team_data['Comp'] == league.name]
             all_data.append(team_data)
 
         return pd.concat(all_seasons_data, ignore_index=True), pd.concat(futur_matches, ignore_index=True)
 
-
+    def save_data(self, data, file_path):
+        data.to_csv(file_path, index=False)
 
     def _fetch_team_urls(self, league_url: str) -> list:
         self._rate_limit()
@@ -65,7 +105,6 @@ class Downloader:
         team_name = team_url.split("/")[-1].replace("-Stats", "").replace("-", " ")
         team_data["Team"] = team_name
 
-        #self.scrape_and_save_logo(team_url, team_name)
         return team_data
 
     def _scrape_detailed_stats(self, team_data: pd.DataFrame, team_response_text: str) -> pd.DataFrame:
@@ -109,3 +148,46 @@ class Downloader:
         self.last_request_time = time.time()
 
     
+    def _futur_matches_process(self, futur_matches, league:League) -> pd.DataFrame:
+
+        futur_matches.dropna(subset=["Date", "Time", "Round"], inplace=True)
+        futur_matches['DateTime'] = pd.to_datetime((futur_matches['Date'] + ' ' + futur_matches['Time']))
+        futur_matches = futur_matches[futur_matches["Comp"] == league.name]
+        futur_matches = futur_matches[futur_matches['DateTime'] >= datetime.datetime.now()].sort_values(by="DateTime")
+        
+        ten_days = datetime.timedelta(days=10) + first_date
+        futur_matches = futur_matches[futur_matches['DateTime'] <= ten_days]
+
+        return futur_matches
+
+    def scrape_and_save_logo(self, team_url, team_name):
+
+            file_path = os.path.join(self.logos_folder, file_name + '.png')
+            if os.path.exists(file_path):
+                print(f"Le logo existe déjà à {file_path}")
+                return
+
+            try:
+                self.rate_limit()
+                response = requests.get(page_url, headers=self.headers)
+                soup = BeautifulSoup(response.text, 'html.parser')
+                logo_img = soup.find('img', {'class': 'teamlogo'})
+
+                if logo_img and logo_img.get('src'):
+                    logo_url = logo_img['src']
+                    self.rate_limit()
+                    img_response = requests.get(logo_url)
+
+                    if img_response.status_code == 200:
+                        image = Image.open(io.BytesIO(img_response.content))
+                        file_path = os.path.join(self.logos_folder, file_name)
+                        if not file_path.endswith('.png'):
+                            file_path += '.png'
+                        image.save(file_path, 'PNG')
+                        print(f"Logo saved at {file_path}")
+                    else:
+                        print("Error during logo download")
+                else:
+                    print("Logo not found")
+            except Exception as e:
+                print(f"An error occurred: {e}")

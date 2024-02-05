@@ -7,6 +7,8 @@ class Model():
     def model(self):
         return self._model
 
+    def 
+
     def modelisation(self, df, cutoff_date, targets=["Result", "Minus 2.5 Goals"], model_type=None, plot_features=False):
         """
         Fonction pour créer et appliquer des modèles de prédiction pour plusieurs cibles.
