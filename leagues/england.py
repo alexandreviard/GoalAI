@@ -1,6 +1,5 @@
 
 from leagues.league import League
-
 class PremierLeague(League):
     def __init__(self):
         super().__init__(

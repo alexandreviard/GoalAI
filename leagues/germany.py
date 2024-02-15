@@ -18,3 +18,4 @@ class Bundesliga(League):
             "Monchengladbach": "M'Gladbach",
             "Nurnberg": "Nürnberg"
         }
+

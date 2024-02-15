@@ -7,7 +7,6 @@ import time
 import os
 
 class Downloader:
-
     def __init__(self):
         self.headers = {'User-Agent': 'Mozilla/5.0'}
         self.last_request_time = None

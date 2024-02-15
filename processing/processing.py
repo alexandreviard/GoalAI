@@ -1,13 +1,6 @@
 import pandas as pd
 import json
-import os
 import numpy as np
-import datetime
-import time
-import requests
-from bs4 import BeautifulSoup
-from PIL import Image
-import io
 
 
 class ProcessingFootball:
@@ -297,11 +290,4 @@ class ProcessingFootball:
 
         return data
 
-
-
-#Keeper Save Percentage_5_Last_Matches_Std     nan = 432 donc les enlever ou les fixer à zéro
-#minmax scaler
-#regarder les groupby index (comprendre)
-#creer les average de donnees en saison
-    
 
